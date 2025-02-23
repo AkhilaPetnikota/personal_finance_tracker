@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Personal Finance Tracker </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Personal Finance Tracker </h1>
+
+  <div id="transaction-form">
+    <h2>Add Transaction</h2>
+      <label for="date">Date :</label>
+      <input type="date" id="date" />
+    </label>
+    <label>
+      Category:
+      <input type="text" id="category" />
+    </label>
+    <label>
+      Description:
+      <input type="text" id="description" />
+    </label>
+    <label>
+      Amount (+ or -):
+      <input type="number" step="0.01" id="amount" />
+    </label>
+    <button id="add-btn">Add</button>
+  </div>
+
+  <div id="filter-form">
+    <h2>Filter Transactions</h2>
+    <label>
+      Start Date:
+      <input type="date" id="start-date" placeholder="YYYY-MM-DD" />
+    </label>
+    <label>
+      End Date:
+      <input type="date" id="end-date" placeholder="YYYY-MM-DD" />
+    </label>
+    <label>
+      Category:
+      <input type="text" id="filter-category" placeholder="Category" />
+    </label>
+    <button id="filter-btn">Filter</button>
+  </div>
+
+  <div id="summary-form">
+    <h2>Monthly Summary</h2>
+    <label>
+      Year (YYYY):
+      <input type="text" id="summary-year" />
+    </label>
+    <label>
+      Month (MM):
+      <input type="text" id="summary-month" />
+    </label>
+    <button id="summary-btn">Get Summary</button>
+    <div id="summary-result"></div>
+  </div>
+
+  <h2>All Transactions</h2>
+  <table id="transactions-table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Amount</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Populated by main.js -->
+    </tbody>
+  </table>
+
+  <!-- Hidden edit form -->
+  <div id="edit-overlay" class="overlay">
+    <div class="overlay-content">
+      <h2>Edit Transaction</h2>
+      <label>
+        Date (YYYY-MM-DD):
+        <input type="text" id="edit-date" />
+      </label>
+      <label>
+        Category:
+        <input type="text" id="edit-category" />
+      </label>
+      <label>
+        Description:
+        <input type="text" id="edit-description" />
+      </label>
+      <label>
+        Amount (+ or -):
+        <input type="number" step="0.01" id="edit-amount" />
+      </label>
+      <br/>
+      <button id="save-edit-btn">Save</button>
+      <button id="cancel-edit-btn">Cancel</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
