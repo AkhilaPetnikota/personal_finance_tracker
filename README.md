@@ -1,6 +1,6 @@
 # personal_finance_tracker
 
-**A full‐stack Rust (Rocket) application for managing your finances.**
+**A full‐stack Rust (Rocket) application for managing finances.**
 
 ## Features
 - **Add Transactions** (income or expense), specifying:
